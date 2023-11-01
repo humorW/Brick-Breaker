@@ -7,6 +7,7 @@ const VELOCITY_LIMIT = 40
 @export var ball_speed = 20
 @export var lifes = 3
 @export var death_zone: DeathZone
+@export var ui: UI
 
 var speed_up_factor = 1.05
 
