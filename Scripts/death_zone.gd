@@ -6,4 +6,4 @@ signal life_lost
 
 
 func _on_body_entered(body):
-	pass # Replace with function body.
+	life_lost.emit()
