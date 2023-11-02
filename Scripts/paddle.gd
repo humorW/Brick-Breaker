@@ -10,7 +10,7 @@ var is_ball_started = false
 @export var speed = 200
 @export var camera: Camera2D
 
-@onready var ball = $"../ball" as Ball
+@onready var ball = $"../Ball" as Ball
 @onready var collision_shape_2D = $CollisionShape2D
 
 func _ready():

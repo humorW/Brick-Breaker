@@ -27,7 +27,13 @@ func _physics_process(delta):
 	if(!collision):
 		return
 		
-	velocity = velocity.bounce(collision.get_normal())
+	var collider = collision.get_collider()
+	if collider is Brick:
+		collider.decrease_level()
+		
+	if (collider is Brick or collider is Paddle):
+
+		velocity = velocity.bounce(collision.get_normal())
 	
 func start_ball():
 	position = start_position
