@@ -5,6 +5,7 @@ class_name  UI
 
 @onready var lifes_label = %LifesLabel
 @onready var GameLostContainer = $GameLostContainer
+@onready var level_won_container = $LevelWonContainer
 
 func set_lifes(lifes: int):
 	lifes_label.text = "lifes: %d" % lifes

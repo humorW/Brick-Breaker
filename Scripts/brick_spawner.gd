@@ -16,8 +16,7 @@ var brick_count = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print(LevelDefinitions)
-	s	spawn_from_defintion(LevelDefinitions.get_current_level())
+	spawn_from_definition(LevelDefinitions.get_current_level())
 
 func spawn():
 	var test_brick = brick_scene.instantiate() as Brick
@@ -43,7 +42,7 @@ func spawn():
 func spawn_from_definition(level_defintion):
 	var test_brick = brick_scene.instantiate() as Brick
 	add_child(test_brick)
-	var brick_size = test_brick.get.size()
+	var brick_size = test_brick.get_size()
 	test_brick.queue_free()
 	
 	var rows = level_defintion.size()

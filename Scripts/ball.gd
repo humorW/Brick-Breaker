@@ -59,7 +59,7 @@ func reset_ball():
 func ball_collision(collider):
 	
 	var ball_width = collision_shape_2d.shape.get_rect().size.x
-	var ball_center = position.x
+	var ball_center_x = position.x
 	var collider_width = collider.get_width()
 	var collider_center_x = collider.position.x
 	
@@ -72,7 +72,7 @@ func ball_collision(collider):
 	new_velocity.x = velocity_xy * collision_x
 	
 	if collider.get_rid() == last_collider_id && collider is Brick:
-		new_velocity.x = new_velocity.rotated(deg_to_red(ranf_range(-45, 45))).x * 10
+		new_velocity.x = new_velocity.rotated(deg_to_rad(randf_range(-45, 45))).x * 10
 	else:
 		last_collider_id == collider.get_rid()
 		
