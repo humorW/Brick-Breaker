@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dl1cs3vnaemdg"]
+[gd_scene load_steps=12 format=3 uid="uid://dl1cs3vnaemdg"]
 
 [ext_resource type="PackedScene" uid="uid://d4f0dh4k7yuix" path="res://Scenes/paddle.tscn" id="1_d25i7"]
 [ext_resource type="PackedScene" uid="uid://bfi0vsbaatnj4" path="res://Scenes/ball.tscn" id="2_f0eid"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://tjpbuvtdyd2a" path="res://Scenes/brick.tscn" id="7_u3jr0"]
 [ext_resource type="AudioStream" uid="uid://b5wjw4aa5bf8" path="res://Audio/702860__inmotionaudio__rockimpt_brick25_inmotionaudio_freesamplesunday.wav" id="8_grrh7"]
 [ext_resource type="AudioStream" uid="uid://c5q54hoib404a" path="res://Audio/706979__jesterwhoo__hitting-a-brick-with-a-sledgehammer-owi.wav" id="9_jdmvs"]
+[ext_resource type="AudioStream" uid="uid://2vqtywf4gif6" path="res://Audio/cottagecore-17463.mp3" id="10_4vfw0"]
+[ext_resource type="AudioStream" uid="uid://cq28b562dcrw8" path="res://Audio/JKL83NH-video-game-win.mp3" id="11_ovnma"]
 
 [node name="Main" type="Node"]
 
@@ -55,8 +57,14 @@ spawn_start = NodePath("../Marker2D")
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(0, -250)
 
-[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+[node name="ballhitsobject" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_grrh7")
 
 [node name="ballhitsthewall" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_jdmvs")
+
+[node name="background music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_4vfw0")
+
+[node name="Gamewin" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_ovnma")
