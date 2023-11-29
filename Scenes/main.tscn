@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dl1cs3vnaemdg"]
+[gd_scene load_steps=13 format=3 uid="uid://dl1cs3vnaemdg"]
 
 [ext_resource type="PackedScene" uid="uid://d4f0dh4k7yuix" path="res://Scenes/paddle.tscn" id="1_d25i7"]
 [ext_resource type="PackedScene" uid="uid://bfi0vsbaatnj4" path="res://Scenes/ball.tscn" id="2_f0eid"]
@@ -11,6 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://c5q54hoib404a" path="res://Audio/706979__jesterwhoo__hitting-a-brick-with-a-sledgehammer-owi.wav" id="9_jdmvs"]
 [ext_resource type="AudioStream" uid="uid://2vqtywf4gif6" path="res://Audio/cottagecore-17463.mp3" id="10_4vfw0"]
 [ext_resource type="AudioStream" uid="uid://cq28b562dcrw8" path="res://Audio/JKL83NH-video-game-win.mp3" id="11_ovnma"]
+[ext_resource type="AudioStream" uid="uid://c48ovbp3se8t1" path="res://Audio/mixkit-arcade-retro-game-over-213.wav" id="12_54jhc"]
 
 [node name="Main" type="Node"]
 
@@ -68,3 +69,6 @@ stream = ExtResource("10_4vfw0")
 
 [node name="Gamewin" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_ovnma")
+
+[node name="GameOver" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_54jhc")
