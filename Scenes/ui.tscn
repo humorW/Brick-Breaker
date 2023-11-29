@@ -1,16 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://dtu2v2u66xlfm"]
+[gd_scene load_steps=5 format=3 uid="uid://cthsrqj7moamg"]
 
-[ext_resource type="Script" path="res://Scripts/ui.gd" id="1_afham"]
-[ext_resource type="FontFile" uid="uid://b4pqfbvte11k6" path="res://Assets/VT323-Regular.ttf" id="2_hpc53"]
+[ext_resource type="FontFile" uid="uid://b4pqfbvte11k6" path="res://Assets/VT323-Regular.ttf" id="1_bhec8"]
+[ext_resource type="Script" path="res://Scripts/ui.gd" id="1_plqj1"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g2xxa"]
-bg_color = Color(0.658824, 0, 0.0588235, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_02pp4"]
+bg_color = Color(0.658824, 0, 0.141176, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lj32s"]
-bg_color = Color(0, 0.690196, 0.65098, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_svoin"]
+bg_color = Color(0.188235, 0.690196, 0.607843, 1)
 
 [node name="UI" type="CanvasLayer"]
-script = ExtResource("1_afham")
+script = ExtResource("1_plqj1")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchors_preset = 15
@@ -18,7 +18,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_vertical = 0
 theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
@@ -27,15 +26,15 @@ theme_override_constants/margin_bottom = 16
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="LifesLabel" type="Label" parent="MarginContainer/HBoxContainer"]
+[node name="LivesLabel" type="Label" parent="MarginContainer/HBoxContainer"]
 unique_name_in_owner = true
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource("2_hpc53")
+theme_override_fonts/font = ExtResource("1_bhec8")
 theme_override_font_sizes/font_size = 32
-text = "Lifes:3"
+text = "Lives 3"
 
 [node name="GameLostContainer" type="CenterContainer" parent="."]
 visible = false
@@ -48,33 +47,25 @@ grow_vertical = 2
 [node name="Panel" type="Panel" parent="GameLostContainer"]
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_g2xxa")
+theme_override_styles/panel = SubResource("StyleBoxFlat_02pp4")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="GameLostContainer/Panel"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -145.0
-offset_top = -30.0
-offset_right = 149.0
-offset_bottom = 31.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
 [node name="Label" type="Label" parent="GameLostContainer/Panel/VBoxContainer"]
 layout_mode = 2
-text = "YOU HAVE LOST
-"
+text = "YOU HAVE LOST"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="GameLostButton" type="Button" parent="GameLostContainer/Panel/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 8
 text = "RESTART GAME"
 
 [node name="LevelWonContainer" type="CenterContainer" parent="."]
@@ -88,34 +79,26 @@ grow_vertical = 2
 [node name="Panel" type="Panel" parent="LevelWonContainer"]
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_lj32s")
+theme_override_styles/panel = SubResource("StyleBoxFlat_svoin")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="LevelWonContainer/Panel"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -145.0
-offset_top = -30.0
-offset_right = 149.0
-offset_bottom = 31.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
 [node name="Label" type="Label" parent="LevelWonContainer/Panel/VBoxContainer"]
 layout_mode = 2
-text = "YOU HAVE WONE THE LEVEL
-"
+text = "YOU HAVE WON THE LEVEL"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="LevelWonButton" type="Button" parent="LevelWonContainer/Panel/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 8
-text = "GO TO NEXT LEVEL"
+text = "Go To Next Level"
 
 [connection signal="pressed" from="GameLostContainer/Panel/VBoxContainer/GameLostButton" to="." method="_on_game_lost_button_pressed"]
 [connection signal="pressed" from="LevelWonContainer/Panel/VBoxContainer/LevelWonButton" to="." method="_on_level_won_button_pressed"]
