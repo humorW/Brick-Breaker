@@ -11,6 +11,7 @@ func set_lives(lives: int):
 	
 func  game_over():
 	game_lost_container.show()
+	$GameOver.stop()
 
 
 func _on_game_lost_button_pressed():
@@ -18,6 +19,7 @@ func _on_game_lost_button_pressed():
 
 func on_level_won():
 	level_won_container.show()
+	$Gamewin.play()
 
 func _on_level_won_button_pressed():
 	LevelDefinitions.current_level = 2
