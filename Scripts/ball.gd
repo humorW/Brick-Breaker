@@ -16,6 +16,8 @@ var start_position: Vector2
 var last_collider_id
 
 @onready var collision_shape_2d = $CollisionShape2D
+@onready var music = $Music
+
 
 func _ready():
 	ui.set_lives(lives)
@@ -42,7 +44,7 @@ func start_ball():
 	randomize()
 	
 	velocity = Vector2(randf_range(-1, 1), randf_range(-.1, -1)).normalized() * ball_speed
-	
+
 	
 func on_life_lost():
 	lives -= 1

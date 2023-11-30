@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dl1cs3vnaemdg"]
+[gd_scene load_steps=15 format=3 uid="uid://dl1cs3vnaemdg"]
 
 [ext_resource type="PackedScene" uid="uid://d4f0dh4k7yuix" path="res://Scenes/paddle.tscn" id="1_d25i7"]
 [ext_resource type="PackedScene" uid="uid://bfi0vsbaatnj4" path="res://Scenes/ball.tscn" id="2_f0eid"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://cthsrqj7moamg" path="res://Scenes/ui.tscn" id="5_3eytw"]
 [ext_resource type="Script" path="res://Scripts/brick_spawner.gd" id="6_am6nt"]
 [ext_resource type="PackedScene" uid="uid://tjpbuvtdyd2a" path="res://Scenes/brick.tscn" id="7_u3jr0"]
-[ext_resource type="AudioStream" uid="uid://b5wjw4aa5bf8" path="res://Audio/702860__inmotionaudio__rockimpt_brick25_inmotionaudio_freesamplesunday.wav" id="8_grrh7"]
 [ext_resource type="AudioStream" uid="uid://c5q54hoib404a" path="res://Audio/706979__jesterwhoo__hitting-a-brick-with-a-sledgehammer-owi.wav" id="9_jdmvs"]
 [ext_resource type="AudioStream" uid="uid://2vqtywf4gif6" path="res://Audio/cottagecore-17463.mp3" id="10_4vfw0"]
 [ext_resource type="AudioStream" uid="uid://cq28b562dcrw8" path="res://Audio/JKL83NH-video-game-win.mp3" id="11_ovnma"]
@@ -40,9 +39,6 @@ color_ramp = SubResource("GradientTexture1D_82rwk")
 position = Vector2(0, 283)
 collision_layer = 2
 camera = NodePath("../Camera2D")
-
-[node name="paddle" type="AudioStreamPlayer" parent="Paddle"]
-stream = ExtResource("8_grrh7")
 
 [node name="Ball" parent="." node_paths=PackedStringArray("death_zone", "ui") instance=ExtResource("2_f0eid")]
 position = Vector2(0, 152)
