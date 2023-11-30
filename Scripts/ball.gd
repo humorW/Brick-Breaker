@@ -43,6 +43,7 @@ func start_ball():
 	
 	velocity = Vector2(randf_range(-1, 1), randf_range(-.1, -1)).normalized() * ball_speed
 	
+	
 func on_life_lost():
 	lives -= 1
 	if lives == 0:
@@ -51,6 +52,7 @@ func on_life_lost():
 		life_lost.emit()
 		reset_ball()
 		ui.set_lives(lives)
+		
 		
 func reset_ball():
 	position = start_position  
