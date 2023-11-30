@@ -93,5 +93,5 @@ stream = ExtResource("10_4vfw0")
 [node name="Win" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_ovnma")
 
-[node name="Deadsound" type="AudioStreamPlayer" parent="."]
+[node name="DeathSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_54jhc")
