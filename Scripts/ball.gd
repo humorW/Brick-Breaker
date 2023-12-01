@@ -23,6 +23,7 @@ func _ready():
 	ui.set_lives(lives)
 	start_position = position
 	death_zone.life_lost.connect(on_life_lost)
+	$Music.play()
 	
 func  _physics_process(delta):
 	var collision = move_and_collide(velocity * ball_speed * delta)
@@ -42,7 +43,7 @@ func  _physics_process(delta):
 func start_ball():
 	position = start_position
 	randomize()
-	
+	$Music.stop()
 	velocity = Vector2(randf_range(-1, 1), randf_range(-.1, -1)).normalized() * ball_speed
 
 	
