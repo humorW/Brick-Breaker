@@ -17,6 +17,8 @@ var last_collider_id
 
 @onready var collision_shape_2d = $CollisionShape2D
 @onready var music = $Music
+@onready var wall = $Wall
+@onready var ball_collide_sound = $ballCollideSound
 
 
 func _ready():
@@ -34,11 +36,18 @@ func  _physics_process(delta):
 	if collider is Brick:
 		collider.decrease_level()
 		
-	if collider is Brick or collider is Paddle:
+	if (collider is Paddle):
 		ball_collision(collider)
+		$ballCollideSound.play()
+		
+	elif (collider is Brick):
+		ball_collision(collider)
+		#retro_explosion.emitting = true
+		$ballCollideSound.play()
 		
 	else:
 		velocity = velocity.bounce(collision.get_normal())
+		wall.play()
 	
 func start_ball():
 	position = start_position
