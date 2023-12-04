@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c8l7ke1ygg27h" path="res://Assets/Ball.png" id="1_e1yjp"]
 [ext_resource type="Script" path="res://Scripts/ball.gd" id="1_vosn5"]
 [ext_resource type="AudioStream" uid="uid://2vqtywf4gif6" path="res://Audio/cottagecore-17463.mp3" id="3_l70gb"]
-[ext_resource type="AudioStream" uid="uid://c5q54hoib404a" path="res://Audio/706979__jesterwhoo__hitting-a-brick-with-a-sledgehammer-owi.wav" id="4_6lvv3"]
+[ext_resource type="AudioStream" uid="uid://bw67jkf1slno5" path="res://Audio/wall sound.mp3" id="4_nrlph"]
 [ext_resource type="AudioStream" uid="uid://fxnvru5wpm8s" path="res://Audio/paddle.wav" id="5_4dlc2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tqo6u"]
@@ -24,7 +24,7 @@ shape = SubResource("CircleShape2D_tqo6u")
 stream = ExtResource("3_l70gb")
 
 [node name="Wall" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_6lvv3")
+stream = ExtResource("4_nrlph")
 
 [node name="ballCollideSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_4dlc2")
