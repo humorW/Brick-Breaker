@@ -5,5 +5,3 @@ res://Scenes/death_zone.tscn
 res://Scenes/ball.tscn
 res://Scenes/ui.tscn
 res://Scenes/brick.tscn
-res://Scripts/ui.gd
-res://Scripts/ball.gd
