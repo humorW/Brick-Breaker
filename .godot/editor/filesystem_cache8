@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1701732201
+::res://::1701894079
 README.md::TextFile::-1::1701387918::0::1::::<><>::
 ::res://Assets/::1701387918
 Ball.png::CompressedTexture2D::7113742415800555843::1701387918::1701387918::1::::<><>::
@@ -12,26 +12,27 @@ Brick-Yellow.png::CompressedTexture2D::5772095262280393697::1701387918::17013879
 icon.svg::CompressedTexture2D::7753658774376271310::1701387918::1701387918::1::::<><>::
 Paddle.png::CompressedTexture2D::5477542658004981000::1701387918::1701387918::1::::<><>::
 VT323-Regular.ttf::FontFile::4453843302194638347::1701387918::1701387918::1::::<><>::
-::res://Audio/::1701732186
+::res://Audio/::1701732990
 DeathSound.wav::AudioStreamWAV::7888504507969555592::1701387918::1701387918::1::::<><>::
 Music.mp3::AudioStreamMP3::8693569637068218445::1701387918::1701387918::1::::<><>::
 paddle.wav::AudioStreamWAV::399252654297611068::1701387918::1701387918::1::::<><>::
+wall sound.mp3::AudioStreamMP3::3996530504182683942::1701732990::1701732990::1::::<><>::
 Wall.wav::AudioStreamWAV::124629150234408187::1701387918::1701387918::1::::<><>::
 Win.mp3::AudioStreamMP3::2886581190051731753::1701387918::1701387918::1::::<><>::
-::res://Scenes/::1701732186
-ball.tscn::PackedScene::2755436297372774747::1701732186::0::1::::<><>::uid://c8l7ke1ygg27h::::res://Assets/Ball.png<>res://Scripts/ball.gd<>uid://2vqtywf4gif6::::res://Audio/cottagecore-17463.mp3<>uid://c5q54hoib404a::::res://Audio/706979__jesterwhoo__hitting-a-brick-with-a-sledgehammer-owi.wav<>uid://fxnvru5wpm8s::::res://Audio/paddle.wav
-brick.tscn::PackedScene::1353081053370680498::1701732128::0::1::::<><>::res://Scripts/brick.gd<>uid://d06ws4g0pu0q0::::res://Assets/Brick-Blue.png
+::res://Scenes/::1701819891
+ball.tscn::PackedScene::2755436297372774747::1701819891::0::1::::<><>::uid://c8l7ke1ygg27h::::res://Assets/Ball.png<>res://Scripts/ball.gd<>uid://2vqtywf4gif6::::res://Audio/cottagecore-17463.mp3<>uid://bw67jkf1slno5::::res://Audio/wall sound.mp3<>uid://fxnvru5wpm8s::::res://Audio/paddle.wav
+brick.tscn::PackedScene::1353081053370680498::1701819891::0::1::::<><>::res://Scripts/brick.gd<>uid://d06ws4g0pu0q0::::res://Assets/Brick-Blue.png
 death_zone.gd::GDScript::-1::1701387918::0::1::::DeathZone<>Area2D<>::
-death_zone.tscn::PackedScene::8894769986977482342::1701732186::0::1::::<><>::res://Scenes/death_zone.gd<>uid://dknirtlhksohs::::res://Audio/DeathSound.wav
+death_zone.tscn::PackedScene::8894769986977482342::1701819891::0::1::::<><>::res://Scenes/death_zone.gd<>uid://dknirtlhksohs::::res://Audio/DeathSound.wav
 main.gd::GDScript::-1::1701387918::0::1::::<>Node<>::
-main.tscn::PackedScene::7985168234664563100::1701732186::0::1::::<><>::uid://d4f0dh4k7yuix::::res://Scenes/paddle.tscn<>uid://bfi0vsbaatnj4::::res://Scenes/ball.tscn<>uid://tb5whxdkf7qa::::res://Scenes/wall.tscn<>uid://dyyxtd3qn6mdi::::res://Scenes/death_zone.tscn<>uid://cthsrqj7moamg::::res://Scenes/ui.tscn<>res://Scripts/brick_spawner.gd<>uid://tjpbuvtdyd2a::::res://Scenes/brick.tscn
-paddle.tscn::PackedScene::9206584100514280247::1701732128::0::1::::<><>::uid://ckbmlemetbql1::::res://Assets/Paddle.png<>res://Scripts/paddle.gd
-ui.tscn::PackedScene::6122004160900777742::1701732186::0::1::::<><>::uid://b4pqfbvte11k6::::res://Assets/VT323-Regular.ttf<>res://Scripts/ui.gd<>uid://cq28b562dcrw8::::res://Audio/JKL83NH-video-game-win.mp3
-wall.tscn::PackedScene::1337513607469432968::1701732128::0::1::::<><>::
-::res://Scripts/::1701732186
+main.tscn::PackedScene::7985168234664563100::1701819891::0::1::::<><>::uid://d4f0dh4k7yuix::::res://Scenes/paddle.tscn<>uid://bfi0vsbaatnj4::::res://Scenes/ball.tscn<>uid://tb5whxdkf7qa::::res://Scenes/wall.tscn<>uid://dyyxtd3qn6mdi::::res://Scenes/death_zone.tscn<>uid://cthsrqj7moamg::::res://Scenes/ui.tscn<>res://Scripts/brick_spawner.gd<>uid://tjpbuvtdyd2a::::res://Scenes/brick.tscn
+paddle.tscn::PackedScene::9206584100514280247::1701819891::0::1::::<><>::uid://ckbmlemetbql1::::res://Assets/Paddle.png<>res://Scripts/paddle.gd
+ui.tscn::PackedScene::6122004160900777742::1701819891::0::1::::<><>::uid://b4pqfbvte11k6::::res://Assets/VT323-Regular.ttf<>res://Scripts/ui.gd<>uid://cq28b562dcrw8::::res://Audio/JKL83NH-video-game-win.mp3
+wall.tscn::PackedScene::1337513607469432968::1701819891::0::1::::<><>::
+::res://Scripts/::1701819891
 ball.gd::GDScript::-1::1701732186::0::1::::Ball<>CharacterBody2D<>::
 brick.gd::GDScript::-1::1701387918::0::1::::Brick<>RigidBody2D<>::
 brick_spawner.gd::GDScript::-1::1701387918::0::1::::BrickSpawner<>Node<>::
-level_definitions.gd::GDScript::-1::1701387918::0::1::::<>Node<>::
-paddle.gd::GDScript::-1::1701387918::0::1::::Paddle<>RigidBody2D<>::
+level_definitions.gd::GDScript::-1::1701819891::0::1::::<>Node<>::
+paddle.gd::GDScript::-1::1701733598::0::1::::Paddle<>RigidBody2D<>::
 ui.gd::GDScript::-1::1701732186::0::1::::UI<>CanvasLayer<>::
